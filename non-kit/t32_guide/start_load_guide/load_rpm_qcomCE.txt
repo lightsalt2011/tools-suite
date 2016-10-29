@@ -1,0 +1,8 @@
+sys.cpu.CORTEXM3 
+sys.down 
+sys.up
+
+d.load.binary CODERAM.BIN 0x100000 /noclear 
+d.load.binary DATARAM.BIN 0x190000 /noclear 
+d.load.binary MSGRAM.BIN 0xfc428000 /noclear 
+d.load.elf rpm.elf /nocode /noclear

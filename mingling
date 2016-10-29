@@ -1,0 +1,87 @@
+sudo apt-get remove pulseaudio
+ps.pl |grep pulse
+pkill pulseaudio
+sudo apt-get install ubuntu-desktop
+
+adb root; adb shell am start -n com.smartisanos.setupwizard/com.smartisanos.setupwizard.SetupWizardCompleteActivity 
+
+adb shell am start -n com.android.settings/com.android.settings.AdvancedSettingsActivity
+
+'/run/user/1000/gvfs/smb-share:server=172.16.2.16,share=share/lvfeng/image'
+
+adb shell am start -n com.android.settings/com.android.settings.FingerprintEnrollingActivity
+
+adb shell am start -n com.android.settings/android.settings.FINGERPRINT_SETUP
+
+
+make ifaa_fw  -j8 showcommands  2>&1 | tee log
+
+adb shell am start -n com.android.settings/android.settings.FINGERPRINT_SETUP
+
+adb shell dumpsys package permission android.permission.MANAGE_FINGERPRINT
+
+adb shell am start -a android.settings.FINGERPRINT_SETUP
+
+adb logcat -s ActivityManager:8
+
+
+ssh ubuntu@172.16.24.253
+bsp123
+
+adb shell logcat -v time | grep -E "fpc|finger"
+
+过滤patch的方法，使用自己的邮箱：
+
+
+grep "huangxiaolu@smartisan.com" -nr . | sed "s/\(.*\){{//g" | tr '}' ' '
+
+
+Wlan: add libwapi to base modules
+Wlan: update wl ver to 7.45.43
+Wlan: update nvram param for RF
+Wlan: update FW from bcm
+Wlan: update bcm pcie OTP file
+........................................
+
+ps $(find /proc/*/fd/* -type l -lname 'anon_inode:inotify' 2>/dev/null | sed 's+/proc/\([^/]*\)/fd/.*+\1+')
+
+
+grep useage
+1. 
+grep "root" -n 1234 
+grep "root" -v 1234  | grep "1234" -v
+dmesg | grep -n -A3 -B2 --color=auto 'eth'
+
+2. 
+根据文件内容递归查找目录
+# grep ‘energywise’ *           #在当前目录搜索带'energywise'行的文件
+
+# grep -r ‘energywise’ *        #在当前目录及其子目录下搜索'energywise'行的文件
+
+# grep -l -r ‘energywise’ *     #在当前目录及其子目录下搜索'energywise'行的文件，但是不显示匹配的行，只显示匹配的文件
+
+3. 
+grep 的正则表达式
+[]
+行首与行尾字节 ^ $
+任意一个字节 . 与重复字节 *
+限定连续 RE 字符范围 {}
+4. 
+扩展grep(grep -E 或者 egrep)：
+ps -t | grep -E "NAME|545"
+
+
+
+git config --local user.name "lightsalt2011"
+git config --local user.email believelf2007@gmail.com
+
+git config --global user.name "lvfeng"
+git config --global user.email lvfeng@smartisan.com
+
+
+
+mount.cifs //172.16.2.225/flash /mnt/ -o file_mode=0555,dir_mode=0444,ro,username=你的用户名,password=你的密码,iocharset=utf8
+mount.cifs //172.16.2.225/flash ~/edl_fs -o file_mode=0555,dir_mode=0555,ro,username=wujian,password=chuizikeji@A727,iocharset=utf8
+
+
+

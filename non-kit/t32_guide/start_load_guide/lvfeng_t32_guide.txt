@@ -1,0 +1,122 @@
+C:\T32\_icdarm64_win\demo\arm64\kernel\linux\linux-3.x
+
+task.config C:\T32\_icdarm64_win\demo\arm64\kernel\linux\linux-3.x\linux3.t32
+menu.reprogram C:\T32\_icdarm64_win\demo\arm64\kernel\linux\linux-3.x\linux.men
+
+
+RPM:
+sys.cpu.cortexm3
+sys.up
+
+1. 先看npa-dump log，可以看出来npa_resource (name: "/clk/bimc")...... 是谁在申请
+
+2. 再看看 rpm-log.txt，
+2075.187133: rpm_abort_interrupt_received (APPS NON SECURE WD BITE) ... aborting
+2075.187135: rpm_err_fatal (lr: 0xfffffff9) (ipsr: 0x00000049) - "Unknown interrupt 73"
+如果rpm log后来出现 rpm_err_fatal 类似的出错log，则认为是rpm有问题了。
+
+v.v rpm_core_dump
+
+do rpm_restore_from_core.cmm
+
+trm 
+lr fffffff9 在cortex m3 上会压入8个regs，此时需要手动恢复stack
+
+v.f
+
+d.la
+
+rpm_core_dump.fault_detail
+
+rpm external log  : deadline miss
+
+v.v railway
+
+v.v rail.rail_state
+
+v.v rpm
+rpm handler
+v.v (Handler *)0x0019d750
+
+handler.smdport. tx_shared_info_ptr_algn
+handler.smdport. rx_shared_info_ptr_algn
+
+readelf -l elf (获取链接地址)
+
+d.SAVE.Binary rpm_elf_ro_0x100090--0x107fff
+
+v.v rpm_core_dump
+
+d.SAVE.Binary rpm_elf_ro_0x100090--0x107fff 0xfc100090--0xfc107fff
+
+有些情况发现 CODERAM 发生bitfilp，可以d.save.binary elf 和 d.save.binary dump，然后diff两个hex文件，看看能不能发现有bitfilp的地方。
+
+d.dump
+
+rpm 的讲解分析了两个例子
+1. 2个寻找pc指针的例子,然后再汇编往上看，努力找到哪里出错了。
+2. 然后结合external log npa_dump.txt 再看看 railway rail_state ....关键字找到可疑点
+3. 分析了一个abort_isr的例子，这是一个bitfilp的例子，这是通过diff　elf and dump 发现可能存在的bitfilp点
+
+TZ: 
+NR094-1 
+
+nonsecure watchdog bites
+
+XPU/AHB/Noc 基本可以通过计算VMID 来定位是哪一个master的问题
+
+secure watchdog 是tz本身无法响应了
+
+发生了ramdump之后rpm pbl -> sbl1 pbl sbl1会load很多image,其中包括tz，所以tz dump 是无法正确保存的，需要tz backup
+
+tz分为 tz kernel tz app ，如果是tz app的话，会挂起tz app 然后打印出来 stack，
+
+和rpm external log 类似 tz 有 tz diag buffer 0xfe87f720 (0xfe87f000 + 0x720)
+
+1. 
+load tz dump
+g_tzbsp_diag = 0xfe8760
+
+d.load.elf OCIMEM 
+d.load.elf mon.elf /nocode /noclear 
+d.load.elf qsee.elf /nocode /noclear
+
+v.v (tzbsp_diag_t*)0xfe876000
+
+boot_info 
+
+log 
+
+stuck
+
+tzbsp_boot_cl_lock
+
+d.load.binary OCIMEM.RAM 0xfe8000
+d.dump 0xfe87f740 
+
+
+首先看所有cpu core 
+v.v tzbsp_boot_cl_lock
+
+ELR_EL3 
+eret
+
+d.la
+
+分析了两个例子，通过sp找到大概位置，然后通过d.dump找到sp lr，进而找到pc，然后看汇编找到最终问题。
+这个过程可能需要切换exception模式  svc smc el3 el1。比较复杂，需要对arm架构熟悉，有机会再看看视频吧
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

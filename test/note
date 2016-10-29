@@ -1,0 +1,6 @@
+DIR_PATH=`readlink -f $0 | xargs dirname`
+sed -n p2
+awk '{print $1}'
+expr 
+ll | awk '{printf ("%s    %s\n",$5, $9)}' | sort -n 
+/system-config/bin/adb 

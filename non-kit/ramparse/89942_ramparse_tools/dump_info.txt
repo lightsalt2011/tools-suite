@@ -1,0 +1,20 @@
+2015/07/28 16:07:02.827
+QPST 2.7.0.429
+pref       base    length               region            file name
+-------------------------------------------------------------------
+   1 0xFE800000     65536               OCIMEM           OCIMEM.BIN 
+   1 0xFC100000    163840  RPM Code RAM region          CODERAM.BIN 
+   1 0xFC190000     81920  RPM Data RAM region          DATARAM.BIN 
+   1 0xFC428000     16384   RPM MSG RAM region           MSGRAM.BIN 
+   1 0xFE0E0000     65536     LPASS LPM region              LPM.BIN 
+   1 0xFD4E5100     16124   IPA uC sram region         IPA_SRAM.BIN 
+   1 0xFD4FA000       252   IPA uC mbox region         IPA_MBOX.BIN 
+   1 0xFD4F0000      8192   IPA uC iram region         IPA_IRAM.BIN 
+   1 0xFD4F4000     16124   IPA uC dram region         IPA_DRAM.BIN 
+   1 0x06F4E7C8         8        Pmic PON stat         PMIC_PON.BIN 
+   1 0x06F4E7C0         4  Reset Status Region         RST_STAT.BIN 
+   1 0x06F502C0   1048576    DDR Training Data         DDR_DATA.BIN 
+   1 0x00000000 1073741824        DDR CS Memory         DDRCS0_0.BIN 
+   1 0x40000000 1073741824        DDR CS Memory         DDRCS0_1.BIN 
+   2 0x06F4D70C      1140           CMM Script             load.cmm 
+2015/07/28 16:08:09.049

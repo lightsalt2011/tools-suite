@@ -1,0 +1,3 @@
+
+command:
+./stressapptest -M 50 -s 86400

@@ -1,0 +1,3817 @@
+lihui@lihui-OptiPlex-3010:~/DDR1$ adb devices
+List of devices attached 
+13a66c95	device
+19966595	device
+
+lihui@lihui-OptiPlex-3010:~/DDR1$ ls
+getBatteryInfo  getlogs.sh  Instructions_MSM8x10_DDR_Stress_tests  Log  logcat.sh  MemoryAnalyzer-1.3.1.20140107-linux.gtk.x86_64.zip
+lihui@lihui-OptiPlex-3010:~/DDR1$ cd Instructions_MSM8x10_DDR_Stress_tests
+lihui@lihui-OptiPlex-3010:~/DDR1/Instructions_MSM8x10_DDR_Stress_tests$ ls
+Instructions_MSM8x10_DDR_Stress_tests.pptm  memtester  memtester_log  memtester_readme  memtester_readme~  QBlizzard_stress
+lihui@lihui-OptiPlex-3010:~/DDR1/Instructions_MSM8x10_DDR_Stress_tests$ adb -s 19966595 push memtester /data/
+1841 KB/s (68252 bytes in 0.036s)
+lihui@lihui-OptiPlex-3010:~/DDR1/Instructions_MSM8x10_DDR_Stress_tests$ adb -s 19966595 shell chmod 777 /data/memtester
+lihui@lihui-OptiPlex-3010:~/DDR1/Instructions_MSM8x10_DDR_Stress_tests$ 
+lihui@lihui-OptiPlex-3010:~/DDR1/Instructions_MSM8x10_DDR_Stress_tests$ 
+lihui@lihui-OptiPlex-3010:~/DDR1/Instructions_MSM8x10_DDR_Stress_tests$ adb -s 19966595 shell /data/memtester ?
+memtester version 4.3.0 (32-bit)
+Copyright (C) 2001-2012 Charles Cazabon.
+Licensed under the GNU General Public License version 2 (only).
+
+pagesize is 4096
+pagesizemask is 0xfffff000
+
+Usage: /data/memtester [-p physaddrbase [-d device]] <mem>[B|K|M|G] [loops]
+lihui@lihui-OptiPlex-3010:~/DDR1/Instructions_MSM8x10_DDR_Stress_tests$ 
+lihui@lihui-OptiPlex-3010:~/DDR1/Instructions_MSM8x10_DDR_Stress_tests$ 
+lihui@lihui-OptiPlex-3010:~/DDR1/Instructions_MSM8x10_DDR_Stress_tests$ 
+lihui@lihui-OptiPlex-3010:~/DDR1/Instructions_MSM8x10_DDR_Stress_tests$ adb -s 19966595 shell /data/memtester 64M 100000 &
+[1] 2931
+lihui@lihui-OptiPlex-3010:~/DDR1/Instructions_MSM8x10_DDR_Stress_tests$ memtester version 4.3.0 (32-bit)
+Copyright (C) 2001-2012 Charles Cazabon.
+Licensed under the GNU General Public License version 2 (only).
+
+pagesize is 4096
+pagesizemask is 0xfffff000
+want 64MB (67108864 bytes)
+got  64MB (67108864 bytes), trying mlock ...locked.
+Loop 1/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 2/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 3/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 4/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 5/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 6/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 7/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 8/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 9/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 10/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 11/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 12/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 13/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 14/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 15/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 16/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 17/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 18/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 19/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 20/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 21/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 22/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 23/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 24/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 25/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 26/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 27/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 28/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 29/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 30/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 31/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 32/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 33/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 34/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 35/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 36/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 37/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 38/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 39/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 40/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 41/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 42/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 43/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 44/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 45/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 46/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 47/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 48/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 49/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 50/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 51/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 52/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 53/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 54/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 55/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 56/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 57/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 58/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 59/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 60/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 61/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 62/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 63/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 64/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 65/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 66/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 67/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 68/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 69/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 70/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 71/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 72/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 73/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 74/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 75/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 76/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 77/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 78/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 79/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 80/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 81/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 82/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 83/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 84/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 85/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 86/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 87/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 88/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 89/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 90/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 91/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 92/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 93/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 94/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 95/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 96/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 97/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 98/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 99/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 100/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 101/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 102/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 103/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 104/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 105/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 106/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 107/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 108/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 109/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 110/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 111/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 112/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 113/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 114/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 115/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 116/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 117/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 118/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 119/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 120/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 121/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 122/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 123/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 124/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 125/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 126/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 127/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 128/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 129/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 130/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 131/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 132/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 133/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 134/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 135/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 136/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 137/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 138/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 139/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 140/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 141/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 142/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 143/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 144/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 145/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 146/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 147/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 148/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 149/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 150/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 151/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 152/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 153/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 154/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 155/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 156/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 157/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 158/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 159/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 160/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 161/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 162/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 163/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 164/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 165/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 166/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 167/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 168/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 169/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 170/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 171/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 172/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 173/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 174/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 175/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 176/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 177/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 178/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 179/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 180/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 181/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 182/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 183/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 184/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 185/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 186/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 187/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 188/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 189/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 190/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 191/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 192/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 193/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 194/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 195/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 196/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 197/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 198/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 199/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 200/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 201/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 202/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 203/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 204/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 205/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 206/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 207/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 208/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 209/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : ok         
+  Walking Ones        : ok         
+  Walking Zeroes      : ok         
+
+Loop 210/100000:
+  Stuck Address       : ok         
+  Random Value        : ok
+  Compare XOR         : ok
+  Compare SUB         : ok
+  Compare MUL         : ok
+  Compare DIV         : ok
+  Compare OR          : ok
+  Compare AND         : ok
+  Sequential Increment: ok
+  Solid Bits          : ok         
+  Block Sequential    : ok         
+  Checkerboard        : ok         
+  Bit Spread          : ok         
+  Bit Flip            : setting 111
+[1]+  Done                    adb -s 19966595 shell /data/memtester 64M 100000
+lihui@lihui-OptiPlex-3010:~/DDR1/Instructions_MSM8x10_DDR_Stress_tests$ 
+

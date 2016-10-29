@@ -1,0 +1,15 @@
+title "./RPM_logs"
+;sys.cpu CortexA57A53
+sys.cpu.cortexm3
+sys.up
+data.load.binary CODERAM.BIN 0x100000
+data.load.binary MSGRAM.BIN 0xFC428000
+data.load.binary DATARAM.BIN 0x190000
+
+data.load.elf RPM_AAAAANAAR.elf /nocode /noclear
+
+v.v rpm_core_dump
+
+
+
+
