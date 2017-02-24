@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/wanglong/workdir/rom2145/vendor/smartisanhw/lib'
+let g:netrw_dirhist_2='/home/wanglong/workdir/rom/kernel/arch/arm/boot/dts'
+let g:netrw_dirhist_3='/home/wanglong/workdir/rom/vendor/smartisanhw/scitd'
+let g:netrw_dirhist_4='/home/wanglong/workdir/rom/vendor/smartisanhw/event_timer'
+let g:netrw_dirhist_5='/home/wanglong/workdir/t2/kernel/arch/arm64'
+let g:netrw_dirhist_6='/home/wanglong/workdir/t2-r1221/kernel/arch/arm64/include'
+let g:netrw_dirhist_7='/home/wanglong/workdir/8992/bootable/bootloader/lk/make'
+let g:netrw_dirhist_8='/home/wanglong/workdir/t2-r1233/vendor/qcom/proprietary/mm-camera/mm-camera2/media-controller/modules/sensors/chromatix/0304'
