@@ -1,0 +1,6 @@
+#ls 
+export CLICOLOR=1
+export LSCOLORS=gxfxaxdxcxegedabagacad
+
+# \h:\W \u\$
+export PS1='\[\033[01;33m\]\u@\h\[\033[01;31m\] \W\[\033[01;37m\] \$$\[\033[00m\] '
